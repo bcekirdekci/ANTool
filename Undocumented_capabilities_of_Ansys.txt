@@ -1,0 +1,37 @@
+light  intensity
+ans_getvalue COMMON,,D3LCOM,,REAL,1
+ans_getvalue COMMON,,D3LCOM,,REAL,5
+
+
+
+)*GET,_z1,common,,d3lcom,,real,(6+(_zz1-1)*9)   ! z1 to 3 light source
+:C )*GET,_z2,common,,d3lcom,,real,(7+(_zz1-1)*9)   ! coords   ! coords
+:C )*GET,_z3,common,,d3lcom,,real,(8+(_zz1-1)*9)
+:C )*GET,_z4,common,,d3lcom,,real,(3*(_zz1-1)+66)  ! intensity factor
+:C )*GET,_z5,common,,d3lcom,,real,(3*(_zz1-1)+51)  ! reflectance factor
+
+
+
+  Prm_[/GFILE]  Pixel resolution -
+  Typ_INT
+  Def_*GET(COMMON,,D3COM,,INT,126)
+
+
+)*GET,_z1,common,,d3com2,,int,13  ! zcap/q-slice translucency key
+
+
+
+maximum of scale : ans_getvalue COMMON,,D3COM,,REAL,292
+
+:C )/NOPR
+/GOPR
+
+
+_NDIS,GRAPH,,NDIS
+
+
+C )*GET,_z1,common,,d2cnmp,,int,1   ! no. of contours
+:C )*IF,_z1,le,0,then
+:C )*GET,_z1,common,,d3com,,int,78   ! no. of contours specified in nvctur(1) !this work
+:
+

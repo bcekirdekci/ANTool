@@ -1,0 +1,21 @@
+~tcl,'lappend auto_path "C:/users/Dmitry/Documents/ANTool"'
+~tcl,'package forget antool'
+~tcl,'package require antool'
+~tcl,'antool::_init'
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
